@@ -34,3 +34,23 @@ class hexagon(object):
         point6 = [center_x + side_length/2, center_y - z]
     
         canvas.create_polygon(point1, point2, point3, point4, point5, point6, fill=color, outline = outline, width = width)
+     
+class circle(object):
+    def __init__(self):
+        self.clr = ""
+        self.r = int
+        self.x = int
+        self.y = int
+    def points(self,x,y,r):
+        self.x=x
+        self.y=y
+        self.r=r
+    def color(self,clr):
+        self.clr=clr
+    def create(self):
+         x = self.x
+         y = self.y
+         r = self.r
+         clr=self.clr
+         w.create_oval(x-r,y-r,x+r,y+r,fill=clr)
+
